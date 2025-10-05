@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: portfolio-website
 spec:
   replicas: 2 # increase the number of replicas.
   template:
