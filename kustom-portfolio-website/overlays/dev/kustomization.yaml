@@ -10,3 +10,4 @@ resources:
 images:
 - name: kodenobi/portfolio-website
   newTag: latest
+
