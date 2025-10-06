@@ -6,4 +6,4 @@ resources:
   - ../../base
 images:
   - name: kodenobi/portfolio-website
-    newTag: 64872c0
+    newTag: 9902ff4
