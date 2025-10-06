@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: portfolio-website-container
-          image: kodenobi/portfolio-website:64872c0
+          image: kodenobi/portfolio-website:9902ff4
           # resources:
           #   limits:
           #     cpu: "500m"
