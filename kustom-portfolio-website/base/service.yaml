@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: portfolio-service
   labels:
-    app: portfolio
+    app: portfolio-website
 spec:
   selector:
-    app: portfolio
+    app: portfolio-website
   ports:
     - name: http
       port: 80

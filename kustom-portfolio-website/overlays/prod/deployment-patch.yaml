@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       labels:
-        app: portfolio 
+        app: portfolio-website 
     spec:
       containers:
       - name: portfolio-website-container
