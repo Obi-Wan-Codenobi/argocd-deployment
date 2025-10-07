@@ -7,6 +7,5 @@ patches:
 
 resources:
   - ../../base
-  - namespace.yaml
 
 namespace: ingress-nginx
