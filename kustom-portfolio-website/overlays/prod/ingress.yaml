@@ -7,6 +7,10 @@ metadata:
     # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
 spec:
+  template:
+    metadata:
+      labels:
+        app: portfolio-website 
   ingressClassName: nginx
   # tls:
   #   - hosts:
