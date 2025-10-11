@@ -1,8 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
+
 metadata:
-  name: portfolio-ingress
-  namespace: prod
+  name: portfolio-website
+  namespace: portfolio-website
   labels:
     app: portfolio-website
   annotations:
@@ -24,6 +25,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: portfolio-service
+                name: portfolio-website
                 port:
                   number: 80

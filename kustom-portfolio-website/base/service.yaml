@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: portfolio-service
-  namespace: prod
+  name: portfolio-website
+  namespace: portfolio-website
   labels:
     app: portfolio-website
 spec:
