@@ -3,7 +3,6 @@ kind: Ingress
 
 metadata:
   name: portfolio-website
-  namespace: portfolio-website
   labels:
     app: portfolio-website
   annotations:
