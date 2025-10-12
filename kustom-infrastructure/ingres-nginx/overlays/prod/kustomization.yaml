@@ -4,9 +4,9 @@ kind: Kustomization
 patches:
   - path: configmap-patch.yaml
   - path: deployment-patch.yaml
+  - path: service.yaml
 
 resources:
   - ../../base
-  - service.yaml
 
 namespace: ingress-nginx
