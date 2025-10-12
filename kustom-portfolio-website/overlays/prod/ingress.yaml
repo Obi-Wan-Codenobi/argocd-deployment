@@ -24,6 +24,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: portfolio-website
+                name: portfolio-service
                 port:
                   number: 80
