@@ -5,7 +5,6 @@ metadata:
   namespace: prod
   labels:
     app: portfolio-website
-
 spec:
   replicas: 1 # default replica count
   selector:
@@ -18,7 +17,7 @@ spec:
     spec:
       containers:
         - name: portfolio-website-container
-          image: kodenobi/portfolio-website:9902ff4
+          image: kodenobi/portfolio-website:705aba9
           ports:
             - containerPort: 3000
           # resources:

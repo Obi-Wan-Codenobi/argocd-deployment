@@ -6,7 +6,6 @@ patches:
 resources:
   - ../../base
   - ingress.yaml
-
 images:
   - name: kodenobi/portfolio-website
-    newTag: 9902ff4
+    newTag: 705aba9
