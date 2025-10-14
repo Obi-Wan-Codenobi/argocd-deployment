@@ -7,4 +7,4 @@ data:
   proxy-buffer-number: "4"
   proxy-buffer-size: 128k
   proxy-busy-buffers-size: 256k
-  custom-http-errors: 404,503,502,504
+  # custom-http-errors: 404,503,502,504 # Removing until custom errors are setup
