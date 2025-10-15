@@ -11,9 +11,9 @@ spec:
         app: dispatcherhq-api 
     spec:
       containers:
-      - name: portfolio-api-container
+      - name: dispatcherhq-api-container
         ports:
-            - containerPort: 3000 
+            - containerPort: 8000
         # resources: # adjust resource requests and limits for testing.
           # limits:
           #   cpu: "1"

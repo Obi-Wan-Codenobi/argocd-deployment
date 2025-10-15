@@ -11,7 +11,7 @@ spec:
         app: dispatcherhq-client 
     spec:
       containers:
-      - name: portfolio-website-container
+      - name: dispatcherhq-client-container
         ports:
             - containerPort: 3000 
         # resources: # adjust resource requests and limits for testing.
