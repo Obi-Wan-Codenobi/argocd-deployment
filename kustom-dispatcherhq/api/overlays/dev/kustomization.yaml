@@ -7,5 +7,5 @@ resources:
   - ../../base
   - ingress.yaml
 images:
-  - name: kodenobi/dispatcherhq-client
+  - name: kodenobi/dispatcherhq-api
     newTag: latest
