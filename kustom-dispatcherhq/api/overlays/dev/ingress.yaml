@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: dispatcherhq-api
+  labels:
+    app: dispatcherhq-api
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
+
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - boatmen.kadesingleton.com
+      secretName: dispatcherhq-tls
+  rules:
+    - host: boatmen.kadesingleton.com
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: dispatcherhq-api-service
+                port:
+                  number: 80

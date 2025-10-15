@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dispatcherhq-client
+  namespace: prod-dispatcherhq
+  labels:
+    app: dispatcherhq-client
+spec:
+  replicas: 1 # default replica count
+  selector:
+    matchLabels:
+      app: dispatcherhq-client
+  template:
+    metadata:
+      labels:
+        app: dispatcherhq-client
+    spec:
+      containers:
+        - name: dispatcherhq-client-container
+          image: kodenobi/dispatcherhq-client:latest
+          ports:
+            - containerPort: 3000
+          # resources:
+          #   limits:
+          #     cpu: "500m"
+          #     memory: "512Mi"
+          #   requests:
+          #     cpu: "250m"
+          #     memory: "256Mi"

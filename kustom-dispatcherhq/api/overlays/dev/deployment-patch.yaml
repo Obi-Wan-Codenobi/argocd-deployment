@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dispatcherhq-api
+  namespace: prod-dispatcherhq
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dispatcherhq-api 
+    spec:
+      containers:
+      - name: portfolio-api-container
+        ports:
+            - containerPort: 3000 
+        # resources: # adjust resource requests and limits for testing.
+          # limits:
+          #   cpu: "1"
+          #   memory: "1Gi"
+          # requests:
+          #   cpu: "500m"
+          #   memory: "512Mi"
