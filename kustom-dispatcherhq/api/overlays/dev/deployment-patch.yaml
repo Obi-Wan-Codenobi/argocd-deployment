@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dispatcherhq-api
-  namespace: prod-dispatcherhq
+  namespace: dev-dispatcherhq
 spec:
   replicas: 2
   template:
