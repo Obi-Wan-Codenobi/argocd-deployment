@@ -17,7 +17,3 @@ configMapGenerator:
       - DB_PASS=db_pass
       - DB_HOST=db_host
       - DB_NAME=db_name
-
-secretGenerator:
-  - name: dispatcherhq-secrets
-    behavior: merge
