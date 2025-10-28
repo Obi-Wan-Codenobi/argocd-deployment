@@ -9,3 +9,15 @@ resources:
 images:
   - name: kodenobi/dispatcherhq-api
     newTag: latest
+
+configMapGenerator:
+  - name: dispatcherhq-config
+    literals:
+      - DB_USER=db_user
+      - DB_PASS=db_pass
+      - DB_HOST=db_host
+      - DB_NAME=db_name
+
+secretGenerator:
+  - name: dispatcherhq-secrets
+    behavior: merge
