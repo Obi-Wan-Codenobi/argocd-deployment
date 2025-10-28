@@ -5,12 +5,8 @@
 (The scuffed way)
 
 ### dev-api
-delete first if secrets already exists 
-(Will need to do this if following this deployment)
-```
-kubectl delete secret dispatcherhq-secrets -n dev-dispatcherhq
-```
-create secret
+
+create secret before deploying
 ```
 kubectl create secret generic dispatcherhq-secrets \
   -n dev-dispatcherhq \
