@@ -20,8 +20,8 @@ spec:
           ports:
             - containerPort: 8000
           envFrom:
-            - configMapRef:
-                name: dispatcherhq-config
+            - secretRef:
+                name: dispatcherhq-secrets
           # resources:
           #   limits:
           #     cpu: "500m"
