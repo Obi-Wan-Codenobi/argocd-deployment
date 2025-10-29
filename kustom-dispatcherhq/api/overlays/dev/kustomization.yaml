@@ -8,7 +8,7 @@ resources:
   - ingress.yaml
 images:
   - name: kodenobi/dispatcherhq-api
-    newTag: deed3b5
+    newTag: 8fe02fb
 configMapGenerator:
   - name: dispatcherhq-config
     literals:
