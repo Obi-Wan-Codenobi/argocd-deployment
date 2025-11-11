@@ -8,4 +8,4 @@ resources:
   - ingress.yaml
 images:
   - name: kodenobi/dispatcherhq-client
-    newTag: cf43711
+    newTag: afeb1e8
