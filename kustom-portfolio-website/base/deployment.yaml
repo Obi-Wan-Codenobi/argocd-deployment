@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: portfolio-website-container
-          image: kodenobi/portfolio-website:9d12e58
+          image: kodenobi/portfolio-website:c87886f
           ports:
             - containerPort: 3000
           # resources:
