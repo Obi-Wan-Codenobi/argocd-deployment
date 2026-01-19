@@ -8,4 +8,4 @@ resources:
   - ingress.yaml
 images:
   - name: kodenobi/portfolio-website
-    newTag: 43bec44
+    newTag: 9d12e58
