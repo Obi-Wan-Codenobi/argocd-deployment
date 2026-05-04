@@ -13,11 +13,10 @@ create secret before deploying
 ```
 kubectl create secret generic dispatcherhq-secrets \
   -n dev-dispatcherhq \
-  --from-literal=DB_USER=db_user \
-  --from-literal=DB_PASS=db_password \
-  --from-literal=DB_HOST=db_host \
-  --from-literal=DB_NAME=db_name
+  --from-env-file=.env \
+  --dry-run=client -o yaml | kubectl apply -f -
 ```
+
 keep secrets from being updated
 ```
 kubectl annotate secret dispatcherhq-secrets \
@@ -27,14 +26,15 @@ kubectl annotate secret dispatcherhq-secrets \
 
 ### cloudflare-tunnel
 
-create secret before deploying
+Create secret before deploying:
 ```
 kubectl create secret generic cloudflare-tunnel-credentials \
   -n cloudflare-tunnel \
-  --from-literal=TUNNEL_ID='your-tunnel-uuid' \
-  --from-literal=credentials.json='{"AccountTag":"ACCOUNT_TAG","TunnelID":"TUNNEL_ID","TunnelSecret":"TUNNEL_SECRET"}'
+  --from-literal=TUNNEL_TOKEN="CF_TUNNEL_TOKEN" \
+  --dry-run=client -o yaml | kubectl apply -f -
 ```
-keep secret from being updated
+
+Keep secret from being updated by ArgoCD:
 ```
 kubectl annotate secret cloudflare-tunnel-credentials \
   -n cloudflare-tunnel \

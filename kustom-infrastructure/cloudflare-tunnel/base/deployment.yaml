@@ -20,17 +20,19 @@ spec:
         - name: cloudflared
           image: cloudflare/cloudflared:2026.3.0
           env:
-            - name: TUNNEL_ID
+            - name: TUNNEL_TOKEN
               valueFrom:
                 secretKeyRef:
                   name: cloudflare-tunnel-credentials
-                  key: TUNNEL_ID
+                  key: TUNNEL_TOKEN
           args:
             - tunnel
+            - --no-autoupdate
             - --config
             - /etc/cloudflared/config.yaml
             - run
-            - $(TUNNEL_ID)
+            - --token
+            - $(TUNNEL_TOKEN)
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -41,9 +43,6 @@ spec:
             - name: config
               mountPath: /etc/cloudflared/config.yaml
               subPath: config.yaml
-            - name: credentials
-              mountPath: /etc/cloudflared/credentials.json
-              subPath: credentials.json
           livenessProbe:
             httpGet:
               path: /ready
@@ -54,6 +53,3 @@ spec:
         - name: config
           configMap:
             name: cloudflared-config
-        - name: credentials
-          secret:
-            secretName: cloudflare-tunnel-credentials
