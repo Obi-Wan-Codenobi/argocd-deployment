@@ -1,0 +1,14 @@
+credentials.json
+*.credentials.json
+.env
+.env.*
+!.env.*.example
+*-secret.yaml
+*-secrets.yaml
+secrets.yaml
+
+# Cloudflare tunnel credentials
+tunnel-credentials.json
+
+# Local overrides
+*.local.yaml
