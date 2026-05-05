@@ -11,9 +11,7 @@ data:
     ingress:
       # Private: ArgoCD — protect this with Cloudflare Access in the dashboard
       - hostname: argocd.kadesingleton.com
-        service: https://argocd-server.argocd.svc.cluster.local:443
-        originRequest:
-          noTLSVerify: true
+        service: http://argocd-server.argocd.svc.cluster.local:80
 
       # Public: DispatcherHQ API
       - hostname: boatmen.kadesingleton.com
